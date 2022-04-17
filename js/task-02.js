@@ -19,7 +19,6 @@ const items = elements => {
 const addItem = document.createElement('li');
 addItem.classList.add('item');
 addItem.textContent = element;
-console.log(addItem);
 return addItem;
 });
 };

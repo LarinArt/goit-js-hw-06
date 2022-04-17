@@ -1,15 +1,16 @@
 const input = {
-    fontSizeContotrol: document.querySelector('#font-size-control'),
+    fontSizeControl: document.querySelector('#font-size-control'),
     text: document.querySelector('#text'),
 };
 const textSize = {
-    minSize: input.fontSizeContotrol.getAttribute('min'),
-    maxSize: input.fontSizeContotrol.getAttribute('max'),
-}
+    minSize: input.fontSizeControl.getAttribute('min'),
+    maxSize: input.fontSizeControl.getAttribute('max'),
+};
 
-input.fontSizeContotrol.addEventListener('mousemove', onMouseMove);
 
-function onMouseMove(event) {
+input.fontSizeControl.addEventListener('input', onInputMove);
+
+function onInputMove(event) {
    const currentValue = event.currentTarget.value;
     if (currentValue >= textSize.minSize && currentValue <= textSize.maxSize) {
         input.text.style.fontSize = `${currentValue}px`
