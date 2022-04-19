@@ -7,8 +7,7 @@ const textSize = {
     maxSize: input.fontSizeControl.getAttribute('max'),
 };
 
-
-input.fontSizeControl.addEventListener('input', onInputMove);
+input.text.style.fontSize = `${input.fontSizeControl.value}px`;
 
 function onInputMove(event) {
    const currentValue = event.currentTarget.value;
@@ -16,3 +15,5 @@ function onInputMove(event) {
         input.text.style.fontSize = `${currentValue}px`
     };
 };
+
+input.fontSizeControl.addEventListener('input', onInputMove);

@@ -14,6 +14,8 @@ const ingredients = [
   'Condiments',
 ];
 
+const ingredientsUl = document.querySelector('ul#ingredients');
+
 const items = elements => {
   return elements.map(element => {
 const addItem = document.createElement('li');
@@ -24,5 +26,4 @@ return addItem;
 };
 
 const addItems = items(ingredients);
-const ingredientsUl = document.querySelector('ul#ingredients');
 ingredientsUl.append(...addItems);
